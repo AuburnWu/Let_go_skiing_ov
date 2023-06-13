@@ -1,0 +1,306 @@
+.main_section {
+    background-color: white;
+    
+
+}
+
+.aside_section {
+    background-color: #84C1FF;
+}
+
+button a{
+    color:black;
+    text-decoration:none;  
+}
+
+button a:hover{
+    color:white; 
+    text-decoration:underline;  
+}
+
+.dropdown-menu a.dropdown-item:hover{
+    color: black;
+    background-color: rgb(252, 252, 135);
+}
+
+.content_section{
+    /* 便於編輯(觀察)，完成後可刪除 */
+    border: 2px solid red;
+    background-color: #51ced1;
+}
+
+
+/* 卡片 */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.item-pic {
+    box-shadow: 0 5px 5px rgba(8, 8, 8, 0.733);
+    width: 100%;
+    height: 330px;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  overflow: hidden;
+  display: block;
+  border: none;
+  border-radius: 2rem;
+  display: block;
+}
+
+.item-pic img {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+  object-fit: cover;
+}
+
+.item-pic:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(13, 15, 16, 0) 0%, rgba(13, 15, 16, 0.95) 100%);
+}
+
+.item-pic .card-tag {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  z-index: 10;
+  padding: 8px 16px;
+  z-index: 3;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+  background-color: #afb0b1;
+}
+
+.item-pic .card-tag span {
+  margin-right: 10px;
+  color: #6c757d;
+}
+
+.item-pic .card-body {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  text-align: left;
+}
+
+.item-pic .card-body .card-title {
+  color: #fff;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.item-pic .card-body .card-title .title-inner {
+  overflow: hidden;
+  height: 24px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.25s ease 0s;
+}
+
+.item-pic .card-body .card-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  height: 2px;
+  background-color: #6c757d;
+  transition: all 0.25s ease 0s;
+}
+
+.item-pic .card-body .card-text {
+  overflow: hidden;
+  height: 45px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.25s ease 0s;
+  font-weight: 300;
+}
+
+.item-pic:hover img {
+  transform: scale(1.04);
+}
+
+.item-pic:hover .card-body .card-title:before {
+  width: 15%;
+}
+
+.item-pic:hover .card-body .card-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pic-primary:before {
+  background: linear-gradient(to bottom, rgba(0, 25, 51, 0) 0%, rgba(0, 25, 51, 0.95) 100%);
+  
+}
+
+.pic-primary .card-tag {
+  background-color: #003166;
+}
+
+.pic-primary .card-tag span {
+  color: #007bff;
+}
+
+.pic-primary .card-body .card-title:before {
+  background-color: #007bff;
+}
+
+.pic-secondary:before {
+  background: linear-gradient(to bottom, rgba(23, 14, 41, 0) 0%, rgba(23, 14, 41, 0.95) 100%);
+}
+
+.pic-secondary .card-tag {
+  background-color: #2d1a50;
+}
+
+.pic-secondary .card-tag span {
+  color: #6f42c1;
+}
+
+.pic-secondary .card-body .card-title:before {
+  background-color: #6f42c1;
+}
+
+.pic-success:before {
+  background: linear-gradient(to bottom, rgba(1, 2, 1, 0) 0%, rgba(1, 2, 1, 0.95) 100%);
+}
+
+.pic-success .card-tag {
+  background-color: #0a2c12;
+}
+
+.pic-success .card-tag span {
+  color: #28a745;
+}
+
+.pic-success .card-body .card-title:before {
+  background-color: #28a745;
+}
+
+.pic-info:before {
+  background: linear-gradient(to bottom, rgba(0, 2, 3, 0) 0%, rgba(0, 2, 3, 0.95) 100%);
+}
+
+.pic-info .card-tag {
+  background-color: #062a30;
+}
+
+.pic-info .card-tag span {
+  color: #17a2b8;
+}
+
+.pic-info .card-body .card-title:before {
+  background-color: #17a2b8;
+}
+
+.pic-warning:before {
+  background: linear-gradient(to bottom, rgba(58, 44, 0, 0) 0%, rgba(58, 44, 0, 0.95) 100%);
+}
+
+.pic-warning .card-tag {
+  background-color: #6d5200;
+}
+
+.pic-warning .card-tag span {
+  color: #ffc107;
+}
+
+.pic-warning .card-body .card-title:before {
+  background-color: #ffc107;
+}
+
+.pic-danger:before {
+  background: linear-gradient(to bottom, rgba(59, 10, 15, 0) 0%, rgba(59, 10, 15, 0.95) 100%);
+}
+
+.pic-danger .card-tag {
+  background-color: #66121a;
+}
+
+.pic-danger .card-tag span {
+  color: #dc3545;
+}
+
+.pic-danger .card-body .card-title:before {
+  background-color: #dc3545;
+}
+
+.pic-light:before {
+  background: linear-gradient(to bottom, rgba(129, 147, 165, 0) 0%, rgba(129, 147, 165, 0.95) 100%);
+}
+
+.pic-light .card-tag {
+  background-color: #9fadba;
+}
+
+.pic-light .card-tag span {
+  color: #f8f9fa;
+}
+
+.pic-light .card-body .card-title:before {
+  background-color: #f8f9fa;
+}
+
+.pic-dark:before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+.pic-dark .card-tag {
+  background-color: black;
+}
+
+.pic-dark .card-tag span {
+  color: #343a40;
+}
+
+.pic-dark .card-body .card-title:before {
+  background-color: #343a40;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  /* 按钮之间的水平间距 */
+}
+
+
+
+/* 雪點文字粗體 */
+.bold {
+    font-weight: bold;
+  }
+
+  /* 超出滑動條 */
+.backmap {
+    overflow-x: hidden; /* 水平方向超出的內容隱藏 */
+    overflow-y: auto; /* 垂直方向超出的內容使用滑動條 */
+    max-height: 568px; /* 設定最大高度，超出部分將使用滑動條 */
+  }
+  
+  .backmap::-webkit-scrollbar {
+    width: 0px; /* 滑動條寬度 */
+  }
+
+  
+
+  
+  /* 欄位的樣式 */
+  
+  .bold-text {
+    font-weight: bold;
+  }
+  
+
+  

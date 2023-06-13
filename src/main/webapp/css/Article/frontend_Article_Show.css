@@ -1,0 +1,95 @@
+.navbar{
+    background-color: #073642 !important
+} 
+
+.navbar-dark .navbar-nav .nav-link{
+    font-size: 14px;
+    /* font-weight: bold; */
+    color: white;
+}
+
+.sidetool_group{
+    right : 10px;
+    bottom: 5px;
+}
+
+.sidetool_button {
+    background-color: rgb(254, 239, 105);
+}
+
+.sidetool_icon{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.container{
+    /* 便於編輯(觀察)，完成後可刪除 */
+    /* border: 2px solid red; */
+}
+
+.footer{
+    background-color: #073642 
+}
+
+.footer-link{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.like-icon {
+    color: blue;
+}
+
+
+
+/* p{
+    display:inline-block;
+} */
+
+/* .no-wrap {
+    white-space: nowrap;
+} */
+
+span {
+    display: inline-block;
+    text-align: right;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.left-align {
+    text-align: left;
+}  
+
+.like-icon {
+    color: black;
+    cursor: pointer;
+}
+
+.like-icon.active {
+    color: blue;
+    
+}
+
+tr, td{
+    border: 1px solid black;
+}
+
+/*這個 CSS 選擇器會選取 .table-responsive 元素中的 .tbody 中的所有 <td> 中的 <p> 標籤，
+並將其文字靠左對齊。!important 標記確保這個樣式優先於其他樣式。*/
+.table-responsive .tbody td p.text-left { 
+    text-align: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+/*要在滑鼠移到表格上時產生發亮效果，你可以使用 CSS 的 :hover 擴展選擇器*/
+/* .table-responsive .tbody tr:hover {
+    background-color: #f5f5f5;
+} */

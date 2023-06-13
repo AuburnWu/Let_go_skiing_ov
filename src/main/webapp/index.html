@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/frontend_public.css" />
+    <link rel="stylesheet" href="/ski/css/ad/indexAD.css" />
+    <title>Let's go skiing</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <!-- 內容欄 -->
+    <div class="main_section position-relative d-flex justify-content-center">
+      <!-- 頁面內容置於此 -->
+      <div class="container-main container text-center fw-bold h-100" style="background-color:#F5F5F5;>
+        <!-- <h1>這是首頁</h1> -->
+        <div class="slider p-0 w-100">
+          <section>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              style="margin-top: 50px; margin-bottom: 50px"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/ski/img/board.png" class="d-block" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="/ski/img/boot.png" class="d-block" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="/ski/img/suit.png" class="d-block" alt="..." />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <!-- 側邊工具列 -->
+        <div
+          class="sidetool_group position-absolute btn-toolbar flex-column mb-3"
+          role="toolbar"
+          aria-label="Toolbar with button groups"
+        >
+          <!-- 聊天室 -->
+          <button
+            type="button"
+            class="sidetool_button btn btn-outline-black mb-1"
+          >
+            <img class="sidetool_icon" src="/ski/img/chat.png" alt="#" />
+          </button>
+          <!-- 客服 -->
+          <button
+            type="button"
+            class="sidetool_button btn btn-outline-black mb-1"
+          >
+            <img class="sidetool_icon" src="/ski/img/service.png" alt="#" />
+          </button>
+          <!-- 返回頂端 -->
+          <button
+            type="button"
+            id="return_top_button"
+            class="sidetool_button btn btn-outline-black mb-1"
+          >
+            <img class="sidetool_icon" src="/ski/img/up_arrow.png" alt="#" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="footer"></footer>
+  </body>
+  <!-- 引入bootstrap套件JS -->
+  <script src="/ski/js/bootstrap.bundle.js"></script>
+  <script src="/ski/js/frontend_public.js"></script>
+  <!-- 引入公版JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/ski/js/embed.js"></script>
+  <!-- <script src="./js/ad_slider.js"></script> -->
+  <script>
+    window.onload = function () {
+      var script1 = document.createElement("script");
+      script1.src = "/ski/js/navbar.js";
+      document.head.appendChild(script1);
+    };
+    window.onload = script;
+  </script>
+</html>

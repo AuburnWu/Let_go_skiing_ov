@@ -1,0 +1,85 @@
+.main_section {
+    background-color: white;
+}
+
+.aside_section {
+    background-color: #84C1FF;
+}
+
+button a{
+    color:black;
+    text-decoration:none;  
+}
+
+button a:hover{
+    color:white; 
+    text-decoration:underline;  
+}
+
+.dropdown-menu a.dropdown-item:hover{
+    color: black;
+    background-color: rgb(252, 252, 135);
+}
+
+.content_section{
+    /* 便於編輯(觀察)，完成後可刪除 */
+    border: 2px solid red;
+
+}
+
+
+
+/* 欄位的樣式 */
+  
+  .bold-text {
+    font-weight: bold;
+  }
+
+  /* 新增按鈕  */
+  .custom-button {
+    background-color: #f5f3b5; /* 自定義背景顏色 */
+    color: #090000; /* 自定義文字顏色 */
+    font-weight: bold ;
+    font-size: larger;
+    /* border-radius: 30px; */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2)
+    
+  }
+
+  .custom-button:hover {
+    background-color: #f3ee63; 
+    /* 懸停時的背景顏色 */
+    /* color: #1503a0;  */
+    /* 懸停時的文字顏色  */
+  }
+
+  /* 空值 */
+  
+  .invalid-feedback {
+    color: red; /* 設定錯誤訊息的文字顏色為紅色 */
+    font-size: 14px; /* 設定錯誤訊息的文字大小 */
+    font-weight: bold; 
+  }
+  
+  .valid-feedback {
+    color: green; /* 設定正確訊息的文字顏色為綠色 */
+    font-size: 14px; /* 設定正確訊息的文字大小 */
+    font-weight: bold;
+  }
+  
+  .is-invalid {
+    border-color: red; /* 設定錯誤欄位的邊框顏色為紅色 */
+    /* border-width: 1.2px; */
+  }
+  
+  .is-valid {
+    border-color: green; /* 設定正確欄位的邊框顏色為綠色 */
+    /* border-width: 1.2px; */
+  }
+
+
+  
+  
+  
+  
+  

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/backend_public.css" />
+    <link rel="stylesheet" href="/ski/css/Product/productAdd.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>商品修改</title>
+  </head>
+
+  <body>
+    <div class="main_section row mb-0">
+      <!-- 左側導航列 -->
+      <div class="backend_side aside_section col-2 p-0"></div>
+      <!-- 右側內容欄 -->
+      <div class="col-10 p-0">
+        <!-- 麵包屑 (路徑位置文字) -->
+        <nav>
+          <ol class="breadcrumb mt-1 px-2">
+            <li class="breadcrumb-item">後臺管理系統 | Let's go skiing</li>
+          </ol>
+        </nav>
+        <!-- 主內容欄 -->
+        <div class="content_section mx-3 my-1">
+          <hr />
+          <!-- 商品表單開始 -->
+          <form id="productForm" enctype="multipart/form-data">
+            <input type="hidden" id="productID" name="productID" value="" />
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text" for="productClass">商品類別</label>
+                  <select class="form-select" id="productClass">
+                    <option value="滑雪用品">滑雪用品</option>
+                    <option value="機能服飾">機能服飾</option>
+                    <option value="鞋/襪">鞋/襪</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-4 align-self-center text-danger">請選擇商品類別</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroup-sizing-default">商品名稱</span>
+                  <input type="text" class="form-control" id="productName" aria-label="商品名稱" aria-describedby="inputGroup-sizing-default" />
+                </div>
+              </div>
+              <div class="col-4 align-self-center text-danger">請輸入商品名稱</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroup-sizing-default">商品單價</span>
+                  <input type="text" class="form-control" id="productPrice" aria-label="商品單價" aria-describedby="inputGroup-sizing-default" />
+                </div>
+              </div>
+              <div class="col-4 align-self-center text-danger">請輸入商品單價</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroup-sizing-default">商品數量</span>
+                  <input type="text" class="form-control" id="productQuantity" aria-label="商品數量" aria-describedby="inputGroup-sizing-default" />
+                </div>
+              </div>
+              <div class="col-4 align-self-center text-danger">請輸入商品數量</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroup-sizing-default">上架日期</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productDate"
+                    aria-label="上架日期"
+                    aria-describedby="inputGroup-sizing-default"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="col-4 align-self-center text-danger">請輸入上架日期</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text" for="productStatus">商品狀態</label>
+                  <select class="form-select" id="productStatus">
+                    <option selected>請選擇商品狀態</option>
+                    <option value="上架中">上架中</option>
+                    <option value="下架中">下架中</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-4 align-self-center text-danger">請選擇商品狀態</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="input-group">
+                  <input type="file" class="form-control" id="productImage" />
+                  <!-- 隱藏的 img 標籤，用於顯示商品圖片 -->
+                </div>
+              </div>
+              <div class="col-8 align-self-center">
+                <div>商品圖片</div>
+                <img id="originalImage" name="originalImage" data-original-image="" style="height: 250px" />
+              </div>
+              <!-- <div class="col-4 align-self-center"> -->
+              <!-- </div> -->
+              <div class="col-4 align-self-center text-danger">請上傳商品圖片</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-8 align-self-center">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="productDetail" style="height: 200px"></textarea>
+                  <label for="floatingTextarea2">商品說明</label>
+                </div>
+              </div>
+              <div class="col-4 align-self-center text-danger" id="productDetailError">請輸入商品說明</div>
+            </div>
+
+            <div class="row mb-3 justify-content-center">
+              <input type="submit" class="btn btn-info col-3" value="商品修改" />
+            </div>
+          </form>
+          <!-- 商品表單結束 -->
+        </div>
+      </div>
+    </div>
+    <!-- 引入bootstrap套件JS -->
+    <script src="/ski/js/bootstrap.bundle.js"></script>
+    <!-- 引入公版JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/ski/js/embed.js"></script>
+    <!-- 引入自定義JS -->
+    <script src="/ski/js/Product/productUpdate.js"></script>
+  </body>
+</html>

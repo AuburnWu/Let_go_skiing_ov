@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/root.css" />
+    <link rel="stylesheet" href="../css/backend_selectmap.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="/backend_map.scss" /> -->
+
+    <title>後臺公版</title>
+  </head>
+
+  <body>
+    <div class="main_section row mb-0">
+      <!-- 左側導航列 -->
+      <div class="aside_section col-2 p-0">
+        <!-- 連結按鈕群 -->
+        <div class="sidebar d-flex flex-column h-100">
+          <!-- 下拉選單內容設定範例 -->
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">下拉選單示意</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">選項文字</a>
+              <a class="dropdown-item" href="#">選項文字</a>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">最新消息管理</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">選項文字</a>
+              <a class="dropdown-item" href="#">選項文字</a>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">會員管理</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">選項文字</a>
+              <a class="dropdown-item" href="#">選項文字</a>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">滑雪地點管理</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">雪點列表</a>
+              <a class="dropdown-item" href="#">新增雪點</a>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">課程管理</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">選項文字</a>
+              <a class="dropdown-item" href="#">選項文字</a>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">討論區管理</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">選項文字</a>
+              <a class="dropdown-item" href="#">選項文字</a>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">商城管理</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">選項文字</a>
+              <a class="dropdown-item" href="#">選項文字</a>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button
+              class="btn btn-sm mt-3 fs-5"
+              type="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+            >
+              <a href="#">客服管理</a>
+            </button>
+            <!-- 選單選項部分 -->
+            <ul class="dropdown-menu dropdown-menu-dark text-center w-100">
+              <a class="dropdown-item" href="#">選項文字</a>
+              <a class="dropdown-item" href="#">選項文字</a>
+            </ul>
+          </div>
+          <a
+            href=""
+            class="rounded-0 list-group-item list-group-item-action mt-auto mb-4 fs-5 text-center border-end-0"
+            >登出</a
+          >
+        </div>
+      </div>
+
+      <!-- 右側內容欄 -->
+      <div class="col-10 p-0">
+        <!-- 麵包屑 (路徑位置文字) -->
+        <nav>
+          <ol class="breadcrumb mt-1 px-2" style="border: 2px blue solid">
+            <li class="breadcrumb-item">後臺系統</li>
+            <!-- 路徑追加方式範例 -->
+            <li class="breadcrumb-item"><a href="#">滑雪地點管理</a></li>
+            <li class="breadcrumb-item"><a href="#">雪點列表</a></li>
+          </ol>
+        </nav>
+        <!-- 主內容欄 -->
+        <div class="content_section vh-100 mx-3 my-1">
+          <!-- <hr /> -->
+          <!-- 頁面內容(功能展現)置於此 -->
+
+          <div class="container py-1">
+            <div class="backmap">
+              <div class="row" id="mycon">
+                <!-- <div class="col-md-4 mb-5">
+                  <a href="#" class="item-pic card pic-primary">
+                    <img src="/img/1.jpg" alt="" />
+                    <div class="card-body">
+                      <h3 class="h4 card-title">
+                        <span class="title-inner bold" id="title"
+                          >滑雪地點</span
+                        >
+                      </h3>
+                      <div class="button-group">
+                        <button
+                          class="btn btn-warning bold text-dark"
+                          onclick="showShelveNotification('成功上架 !'); changeTitleColor('warning')"
+                        >
+                          上架
+                        </button>
+                        <button
+                          class="btn btn-secondary bold text-dark"
+                          onclick="showShelveNotification('注意 已下架 !'); changeTitleColor('secondary')"
+                        >
+                          下架
+                        </button>
+                        <button
+                          class="btn btn-info bold text-dark"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                        >
+                          編輯
+                        </button>
+                        <button
+                          class="btn btn-danger bold text-dark"
+                          onclick="confirmDelete()"
+                        >
+                          刪除
+                        </button>
+                      </div>
+                    </div>
+                  </a>
+                </div> -->
+
+                <!-- ------------------------------------------------------------------------------------- -->
+
+                <!-- ------------------------------------------------------------------------------------- -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 編輯按鈕的彈窗頁面 -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">編輯表單</h5>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-3">
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="skiNameInput"
+                    >名稱</label
+                  >
+                  <input
+                    type="text"
+                    id="skiNameInput"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="skiName"
+                  />
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                  <!-- 錯誤訊息容器 -->
+                </div>
+              </div>
+              <!-- ------------------------------------------------------------------------------------- -->
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="areaInput"
+                    >區域</label
+                  >
+                  <input
+                    type="text"
+                    id="areaInput"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="areaName"
+                  />
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                  <!-- 錯誤訊息容器 -->
+                </div>
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------- -->
+            <div class="row mb-3">
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="latInput"
+                    >緯度</label
+                  >
+                  <input
+                    type="text"
+                    id="latInput"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="latName"
+                  />
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                  <!-- 錯誤訊息容器 -->
+                </div>
+              </div>
+              <!-- ------------------------------------------------------------------------------------- -->
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="lngInput"
+                    >經度</label
+                  >
+                  <input
+                    type="text"
+                    id="lngInput"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="lngName"
+                  />
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                  <!-- 錯誤訊息容器 -->
+                </div>
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------- -->
+
+            <div class="row mb-3">
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="infoInput"
+                    >雪點資訊</label
+                  >
+                  <input
+                    type="text"
+                    id="infoInput"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="infoName"
+                  />
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                  <!-- 錯誤訊息容器 -->
+                </div>
+              </div>
+              <!-- ------------------------------------------------------------------------------------- -->
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="ratingInput"
+                    >推薦分數</label
+                  >
+                  <select class="form-select" id="ratingInput">
+                    <option selected></option>
+                    <option value="1">1分</option>
+                    <option value="2">2分</option>
+                    <option value="3">3分</option>
+                    <option value="4">4分</option>
+                    <option value="5">5分</option>
+                  </select>
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                </div>
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------- -->
+            <div class="row mb-3">
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="starMonthInput"
+                    >起始月份</label
+                  >
+                  <select class="form-select" id="starMonthInput">
+                    <option selected></option>
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                  </select>
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                </div>
+              </div>
+              <!-- ------------------------------------------------------------------------------------- -->
+              <div class="col-6 align-self-center">
+                <div class="input-group">
+                  <label class="input-group-text bold-text" for="endMonthInput"
+                    >結束月份</label
+                  >
+                  <select class="form-select" id="endMonthInput">
+                    <option selected></option>
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                  </select>
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                </div>
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------- -->
+            <div class="row mb-3">
+              <div class="col-6">
+                <div class="form-floating bold-text">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="skiView"
+                    style="height: 290px"
+                  ></textarea>
+                  <div class="invalid-feedback">必填</div>
+                  <div class="valid-feedback">通過 !</div>
+                  <!-- 錯誤訊息容器 -->
+
+                  <label for="skiView">雪點簡介</label>
+                </div>
+              </div>
+              <!-- ------------------------------------------------------------------------------------- -->
+              <div class="col-6">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="input-group mb-2">
+                    <label class="input-group-text bold-text" for="skiImage"
+                      >雪點圖片</label
+                    >
+                    <input type="file" class="form-control" id="skiImage" />
+                    <div class="invalid-feedback">必填</div>
+                    <div class="valid-feedback">通過 !</div>
+                    <!-- 錯誤訊息容器 -->
+                  </div>
+                  <div>
+                    <img
+                      src=""
+                      alt="請選擇需更換的圖片"
+                      id="skiImagePreview"
+                      style="max-width: 100%px; height: 240px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ------------------------------------------------------------------------------------- -->
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              id="cancelButton"
+            >
+              取消
+            </button>
+
+            <button class="btn btn-primary" onclick="saveChanges()">
+              儲存
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------- -->
+
+    <!-- 引入bootstrap套件JS -->
+
+    <script src="../js/backend_selectmap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

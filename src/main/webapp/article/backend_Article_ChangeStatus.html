@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/backend_public.css" />
+
+    <link rel="stylesheet" href="/ski/css/Article/backend_Article_ChangeStatus.css"/>
+    <title>後臺文章管理_上下架文章</title>
+  </head>
+
+  <body>
+    <div class="main_section row mb-0">
+      <!-- 左側導航列 -->
+      <div class="backend_side aside_section col-2 p-0"></div>
+      <!-- 右側內容欄 -->
+      <div class="col-10 p-0">
+        <!-- 麵包屑 (路徑位置文字) -->
+        <nav>
+          <ol class="breadcrumb mt-1 px-2" style="border: 2px blue solid">
+            <li class="breadcrumb-item">後臺管理系統 | Let's go skiing</li>
+            <li class="breadcrumb-item"><a href="/ski/article/backend_Article.html">文章管理</a>
+          </ol>
+        </nav>
+        <!-- 主內容欄 -->
+        <div class="content_section mx-3 my-1">
+          <hr />
+          <!-- 頁面內容(功能展現)置於此 -->
+          <div id="type">
+            <!--        <p class="datetime">發表時間: by 會員ID 修改時間時間:</p>-->
+            <!--        <h1 class="title">文章標題</h1>-->
+            <!--        <h5 class="type">文章分類</h5>-->
+            <!--        <div class="content_section">-->
+            <!--          <p class="content">文章內容</p>-->
+            <!--          <button class="changeStatus1">下架文章</button>-->
+            <!--          <button class="changeStatus0 -none">重新上架文章</button>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 引入bootstrap套件JS -->
+    <script src="/ski/js/bootstrap.bundle.js"></script>
+    <!-- 引入公版JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/ski/js/embed.js"></script>
+    <!-- 引入自定義JS -->
+    <script src="/ski/js/Article/backend_Article_ChangeStatus.js"></script>
+  </body>
+</html>

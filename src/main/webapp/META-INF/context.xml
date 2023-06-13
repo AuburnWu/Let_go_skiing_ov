@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Context>
+
+<!-- 	實作DBCP(Apache Commons DBCP) -->
+	<Resource name="jdbc/ski"
+		type="javax.sql.DataSource"
+		url="jdbc:mysql://localhost:3306/ski" username="root"
+		password="password" driverClassName="com.mysql.cj.jdbc.Driver"
+		maxActive="8" maxIdle="4" maxWait="5000" />
+		
+</Context>

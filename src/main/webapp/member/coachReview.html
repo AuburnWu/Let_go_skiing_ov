@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/backend_public.css" />
+    <link rel="stylesheet" href="/ski/css/member/member.css" />
+    <title>教練資格審核</title>
+  </head>
+
+  <body>
+    <div class="main_section row mb-0 vh-100">
+      <!-- 左側導航列 -->
+      <div class="backend_side aside_section col-2 p-0"></div>
+      <!-- 右側內容欄 -->
+      <div class="col-10 p-0">
+        <!-- 麵包屑 (路徑位置文字) -->
+        <nav>
+          <ol class="breadcrumb mt-1 px-2">
+            <li class="breadcrumb-item">後臺管理系統 | Let's go skiing</li>
+          </ol>
+        </nav>
+        <!-- 主內容欄 -->
+        <div class="content_section mx-3 my-1">
+          <table class="table" id="allCoach">
+            <thead>
+              <tr>
+                <th scope="col">教練編號</th>
+                <th scope="col">會員編號</th>
+                <th scope="col">技能</th>
+                <th scope="col">個人經歷</th>
+                <th scope="col">自我介紹</th>
+                <th scope="col">證照</th>
+                <th scope="col">其他</th>
+                <th scope="col">資格審核</th>
+                <th scope="col">狀態</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- 引入bootstrap套件JS -->
+    <script src="/ski/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/ski/js/embed.js"></script>
+    <script src="/ski/js/member/coachReview.js"></script>
+  </body>
+</html>

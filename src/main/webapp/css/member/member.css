@@ -1,0 +1,64 @@
+/* 調整form表單 */
+.member-form-container { 
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 調整陰影 */
+  padding: 20px;
+}
+
+.coach-form-container { 
+  width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 調整陰影 */
+  padding: 20px;
+}
+
+/* 驗證碼 */
+#codeShow {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-image: url(../../img/code.jpg);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.link-group {
+  display: flex;
+  justify-content: center;
+}
+.link {
+  margin: 10px 10px; /* 調整左右間距 */
+}
+
+/* 調整輸入框大小 */
+.form-control {
+  font-size: 14px; 
+  width: 200px;
+}
+
+/* 調整文字大小 */
+.form-label {
+  font-size: 14px;
+}
+
+/* 會員中心文字大小 */
+.memberInfo{
+  font-size: 12px;
+}
+
+.fixed-image {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.approve-btn {
+  margin-right: 5px;
+}

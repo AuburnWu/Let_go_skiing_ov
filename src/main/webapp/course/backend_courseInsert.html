@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- 引入bootstrap套件CSS -->
+	<link rel="stylesheet" href="../css/bootstrap.css" />
+	<link rel="stylesheet" href="../css/root.css" />
+	<link rel="stylesheet" href="../css/backend_public.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>課程後台新增</title>
+</head>
+
+<body>
+	<div class="main_section row mb-0">
+		<!-- 左側導航列 -->
+		<div class="backend_side aside_section col-2 p-0"></div>
+
+			
+
+				
+
+		
+
+		<!-- 右側內容欄 -->
+		<div class="col-10 p-0">
+			<!-- 麵包屑 (路徑位置文字) -->
+			<nav>
+				<ol class="breadcrumb mt-1 px-2">
+					<li class="breadcrumb-item">後臺系統</li>
+					<!-- 路徑追加方式範例 -->
+					<li class="breadcrumb-item"><a href="./backend_courseMain.html">課程管理</a></li>
+					<li class="breadcrumb-item"><a href="#">課程新增</a></li>
+				</ol>
+			</nav>
+			<!-- 主內容欄 -->
+			<div class="content_section mx-3 my-1">
+				<hr />
+				<form id="courseForm" method="POST" enctype="multipart/form-data">
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseSkill">課程類型</label>
+								<select class="form-select" id="courseSkill">
+									<option disabled selected>請選擇課程類型</option>
+									<option value="0">單板</option>
+									<option value="1">雙版</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請選擇課程類別</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseLevel">課程程度</label>
+								<select class="form-select" id="courseLevel" placeholder="請選擇課程程度">
+									<option disabled selected>請選擇課程程度</option>
+									<option value="0">初階</option>
+									<option value="1">中階</option>
+									<option value="2">高階</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請選擇課程程度</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseName">課程名稱</label>
+								<input type="text" id="courseName" class="form-control"
+									aria-label="Sizing example input" aria-describedby="courseName">
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入課程名稱</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseCoach">授課教練</label>
+								<select class="form-select" id="courseCoach" placeholder="請選擇授課教練">
+									<option disabled selected>請選擇授課教練</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入授課教練</div>
+					</div>
+					
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseLocation">授課地點</label>
+								<select class="form-select" id="courseLocation" placeholder="請選擇授課地點">
+									<option disabled selected>請選擇授課地點</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入授課地點</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseDate">授課日期</label>
+								<input type="date" id="courseDate" class="form-control" />
+								<span id="startDateSelected"></span>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入授課日期</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="startDate">報名始日</label>
+								<input type="date" id="startDate" class="form-control" />
+								<span id="startDateSelected"></span>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入報名始日</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="endDate">報名迄日</label>
+								<input type="date" id="endDate" class="form-control" />
+								<span id="startDateSelected"></span>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入報名迄日</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="coursePrice">課程售價</label>
+								<input type="text" id="coursePrice" class="form-control"
+									aria-label="Sizing example input" aria-describedby="coursePrice">
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入課程售價</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseMax">人數上限</label>
+								<input type="text" id="courseMax" class="form-control" aria-label="Sizing example input"
+									aria-describedby="courseQuantity">
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入人數上限</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseMin">人數下限</label>
+								<input type="text" id="courseMin" class="form-control" aria-label="Sizing example input"
+									aria-describedby="courseQuantity">
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入人數下限</div>
+					</div>
+					<!-- file -->
+					<!-- status -->
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="courseStatus">課程狀態</label>
+								<select class="form-select" id="courseStatus">
+									<option disabled selected>請選擇課程狀態</option>
+									<option value="0">上架中</option>
+									<option value="1">下架中</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請選擇課程狀態</div>
+					</div>
+					<!-- status -->
+
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="input-group">
+								<label class="input-group-text" for="coursePhoto">課程圖片</label>
+								<input type="file" class="form-control" id="coursePhoto">
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請上傳課程圖片</div>
+					</div>
+					<!-- textarea -->
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<div class="form-floating">
+								<textarea class="form-control" placeholder="Leave a comment here" id="courseIntroduce"
+									style="height: 200px;"></textarea>
+								<label for="courseIntroduce">課程說明</label>
+							</div>
+						</div>
+						<div class="col-4 align-self-center text-danger d-none">請輸入課程說明</div>
+					</div>
+					<!-- button -->
+					<div class="row mb-3">
+						<div class="col-8 align-self-center">
+							<button id="addButton" type="button" class="btn btn-primary">完成</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- 引入bootstrap套件JS -->
+	<!-- <script src="ski/js/bootstrap.bundle.js"></script> -->
+	<script src="../js/bootstrap.bundle.js"></script>
+	<script src="../js/Course/course_be_insert.js"></script>
+	<script src="../js/embed.js"></script>
+	<!-- 引入自定義JS -->
+	<!-- <script src="/ski/js/courseAdd.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/root.css" />
+    <link rel="stylesheet" href="../css/backend_public.css" />
+    <link rel="stylesheet" href="../css/order/order_backend.css" />
+    <title>後台商品訂單管理</title>
+  </head>
+
+  <body>
+    <div class="main_section row mb-0">
+      <!-- 左側導航列 -->
+      <div class="backend_side aside_section col-2 p-0"></div>
+      <!-- 右側內容欄 -->
+      <div class="col-10 p-0">
+        <!-- 麵包屑 (路徑位置文字) -->
+        <nav>
+          <ol class="breadcrumb mt-1 px-2" style="border: 2px blue solid">
+            <li class="breadcrumb-item">後臺管理系統 | Let's go skiing</li>
+          </ol>
+        </nav>
+        <!-- 主內容欄 -->
+        <div
+          class="content_section vh-100 mx-3 my-1"
+          style="text-align: center"
+        >
+          <hr />
+          <div>
+            <p style="display: inline">輸入會員編號:</p>
+            <input type="number" id="searchByID" />
+            <button id="searchByIdBtn">查詢</button><br />
+            <p style="display: inline">輸入會員姓名:</p>
+            <input type="text" id="searchByName" />
+            <button id="searchByNameBtn">查詢</button>
+          </div>
+          <div id="displayOrder">
+            <table>
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="displayDetail">
+            <table>
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 引入bootstrap套件JS -->
+    <script src="../js/bootstrap.bundle.js"></script>
+    <!-- 引入公版JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/embed.js"></script>
+    <!-- 引入自定義JS -->
+    <script src="../js/jQuery v3.7.0.js"></script>
+    <script src="../js/Order/productOrderBackend.js"></script>
+  </body>
+</html>

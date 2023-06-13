@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/frontend_public.css" />
+
+    <link rel="stylesheet" href="/ski/css/Article/frontend_Article_Add.css" />
+    <title>前臺討論區_新增</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <!-- 內容欄 -->
+    <div class="main_section position-relative d-flex justify-content-center mb-0" >
+      <!-- 頁面內容置於此 -->
+      <div class="container-main container text-center fw-bold h-100">
+        <h1 class="add">發表文章</h1>
+        <!-- <form> -->
+        <select class="articleType">
+          <!-- <option value="option1">選項 1</option>
+          <option value="option2">選項 2</option>
+          <option value="option3">選項 3</option>
+          <option value="option4">選項 4</option> -->
+        </select>
+        <label for="title">標題：</label>
+        <input type="text" name="title" class="title"><br>
+
+        <label for="content">內容：</label><br>
+        <textarea id="content" name="content" rows="10" cols="50" class="content"></textarea>
+        
+        <!-- <div class="content">
+          <div class="text-wrapper">
+            <textarea id="text" name="text" rows="10" cols="50"></textarea>
+            <div class="image-wrapper">
+              <img src="path/to/your/image.jpg" alt="圖片">
+            </div>
+          </div>
+        </div> -->
+
+
+        <br>
+
+        <button class="add">發表</button>
+        <!-- <form id="uploadForm" enctype="multipart/form-data">
+          <input type="file" id="imageFile" name="imageFile">
+          <button type="submit">上傳圖片</button>
+        </form> -->
+        
+        <!-- </form> -->
+      </div>
+
+        <!-- 側邊工具列 -->
+        <div class="sidetool_group position-absolute btn-toolbar flex-column mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <!-- 聊天室 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/chat.png" alt="#" />
+          </button>
+          <!-- 客服 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/service.png" alt="#" />
+          </button>
+          <!-- 返回頂端 -->
+          <button type="button" id="return_top_button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/up_arrow.png" alt="#" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="footer"></footer>
+  </body>
+  <!-- 引入bootstrap套件JS -->
+  <script src="/ski/js/bootstrap.bundle.js"></script>
+  <script src="/ski/js/frontend_public.js"></script>
+  <!-- 引入公版JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/ski/js/embed.js"></script>
+  <script>
+    window.onload = function() {
+      var script1 = document.createElement("script");
+      script1.src = "/ski/js/navbar.js";
+      document.head.appendChild(script1);
+    };
+  </script>
+  <!-- 引入自定義JS -->
+  <script src="/ski/js/Article/frontend_Article_Add.js"></script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 引入bootstrap套件CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/root.css" />
+  <link rel="stylesheet" href="../css/backend_public.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>課程管理</title>
+</head>
+
+
+<body>
+  <div class="main_section vh-100 row mb-0">
+  <!-- 左側導航列 -->
+   <div class="backend_side aside_section col-2 p-0"></div>
+    <!-- 右側內容欄 -->
+    <div class="col-10 p-0">
+      <!-- 主內容欄 -->
+      <div class="content_section mx-3 my-1">
+        <hr/>
+              <!-- 麵包屑 (路徑位置文字) -->
+        <nav aria-label="breadcrumb ">
+          <ol class="breadcrumb justify-content-center my-3 bg-info p-3">
+            <li class="breadcrumb-item">課程管理</li>
+            <li class="breadcrumb-item">課程列表</li>
+          </ol>
+          
+           <input id="serachbar" class="m-2" type="text" placeholder="請輸入搜尋名稱">
+
+        	<a href="../course/backend_courseInsert.html">
+        				<button id="btn-insert">新增</button>
+        			</a>
+
+        </nav>
+        
+        <table class="table table-striped table-hover text-center">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">課程編號</th>
+              <th scope="col">課程圖片</th>
+              <th scope="col">教練ID</th>
+              <th scope="col">課程類型</th>
+              <th scope="col">課程程度</th>
+              <th scope="col">課程名稱</th>
+              <th scope="col">授課地點</th>
+              <th scope="col">授課時間</th>
+              <th scope="col">報名人數</th>
+              <th scope="col">課程狀態</th>
+              <th scope="col">課程修改</th>
+              <th scope="col">課程刪除</th>
+            </tr>
+          </thead>
+          <tbody id="courseTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入bootstrap套件JS -->
+  <script src="../js/bootstrap.bundle.js"></script>
+  <script src="../js/Course/course_be_main.js"></script>
+  <script src="../js/embed.js"></script>
+</body>
+
+</html>

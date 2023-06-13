@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- 引入bootstrap套件CSS -->
+	<link rel="stylesheet" href="../css/bootstrap.css" />
+	<link rel="stylesheet" href="../css/root.css" />
+	<link rel="stylesheet" href="../css/frontend_public.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<title>課程</title>
+</head>
+
+<body>
+	<header class="header"></header>
+
+	<!-- 內容欄 -->
+	<div class="main_section position-relative  d-flex justify-content-center mb-0">
+		<!-- 頁面內容置於此 -->
+		<div class="container ">
+			<!-- 分類按鈕 -->
+			<div class="tagGroup d-flex justify-content-center">
+				<div class="d-flex">
+					<!-- 課程類型分類 -->
+					<div class="skillZone m-2">
+						<span>課程類型</span>
+						<input type="radio" class="skilloptions btn-check" name="skilloptions" id="skill_-1" value="-1"
+							autocomplete="off" checked>
+						<label class="btn btn-secondary" for="skill_-1">全部</label>
+						<input type="radio" class="skilloptions btn-check" name="skilloptions" id="skill_0" value="0"
+							autocomplete="off">
+						<label class="btn btn-secondary" for="skill_0">單板</label>
+						<input type="radio" class="skilloptions btn-check" name="skilloptions" id="skill_1" value="1"
+							autocomplete="off">
+						<label class="btn btn-secondary" for="skill_1">雙板</label>
+					</div>
+
+					<!-- 課程等級分類 -->
+					<div class="levelZone m-2">
+						<span>課程等級</span>
+						<input type="radio" class="leveloptions btn-check" name="leveloptions" id="level_-1" value="-1"
+							autocomplete="off" checked>
+						<label class="btn btn-secondary" for="level_-1">全部</label>
+						<input type="radio" class="leveloptions btn-check" name="leveloptions" id="level_0" value="0"
+							autocomplete="off">
+						<label class="btn btn-secondary" for="level_0">初階</label>
+						<input type="radio" class="leveloptions btn-check" name="leveloptions" id="level_1" value="1"
+							autocomplete="off">
+						<label class="btn btn-secondary" for="level_1">中階</label>
+						<input type="radio" class="leveloptions btn-check" name="leveloptions" id="level_2" value="2"
+							autocomplete="off">
+						<label class="btn btn-secondary" for="level_2">高階</label>
+					</div>
+				</div>
+			</div>
+			<!-- 搜尋欄 -->
+			<div class="searchZone mb-3 d-flex justify-content-center">
+				<input type="text" id="searchbar" ; class="col-10" placeholder="請輸入課程關鍵字..." />
+			</div>
+			<div class=" mb-2 d-flex justify-content-center">
+			    <p id="levelHolder" class="text-secondary d-none"> 您所設定的程級為 : <span id="memberLevel" ></span> </p>
+			</div>
+			<!-- 課程展示 -->
+			<div id="courseContainer"  >
+				<div class="overflow-auto" id="courseContent" style="height: 500px;">
+				</div>
+			</div>
+		</div>
+		<!-- 商品由JavaScript動態生成 -->
+	</div>
+	</div>
+	</div>
+	<!-- 側邊工具列 -->
+	<div class="sidetool_group position-absolute btn-toolbar flex-column mb-3" role="toolbar"
+		aria-label="Toolbar with button groups">
+		<!-- 聊天室 -->
+		<button type="button" class="sidetool_button btn btn-outline-black mb-1">
+			<img class="sidetool_icon" src="/ski/img/chat.png" alt="#" />
+		</button>
+		<!-- 客服 -->
+		<button type="button" class="sidetool_button btn btn-outline-black mb-1">
+			<img class="sidetool_icon" src="/ski/img/service.png" alt="#" />
+		</button>
+		<!-- 返回頂端 -->
+		<button type="button" id="return_top_button" class="sidetool_button btn btn-outline-black mb-1">
+			<img class="sidetool_icon" src="/ski/img/up_arrow.png" alt="#" />
+		</button>
+	</div>
+	</div>
+	<br />
+
+	<footer class="footer"></footer>
+</body>
+
+<!-- 引入bootstrap套件JS -->
+<script src="../js/frontend_public.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/Course/course_fe_main.js"></script>
+<script src="../js/embed.js"></script>
+<script>
+	window.onload = function () {
+		var script1 = document.createElement("script");
+		script1.src = "../js/navbar.js";
+		document.head.appendChild(script1);
+	};
+</script>
+
+</html>

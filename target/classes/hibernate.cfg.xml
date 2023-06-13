@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ski</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">password</property>
+
+		<!-- JNDI -->
+		<!-- <property name="hibernate.connection.datasoCurce">java:comp/env/jdbc/ski</property> -->
+
+		<!-- 設定MySQL方言，ex:limit -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.highlight_sql">true</property>
+
+		<!-- 讓一個請求配一個session物件(一個連線) -->
+		<!-- 在Spring的環境底下，不可以用thread，要用Spring提供的方法 -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- <mapping class="ad.course.vo.CourseAd" /> -->
+		<!-- <mapping class="ad.course.vo.CourseAdHistory" /> -->
+		<!-- <mapping class="ad.product.vo.ProductAd" /> -->
+		<!-- <mapping class="ad.product.vo.ProductAdHistory" /> -->
+
+		<!-- <mapping class="article.vo.Article" /> -->
+		<!-- <mapping class="article.vo.ArticleType" /> -->
+		<!-- <mapping class="article.vo.ArticleImage" /> -->
+		<!-- <mapping class="article.vo.ArticleLike" /> -->
+		<!-- <mapping class="article.vo.Comment" /> -->
+		<!-- <mapping class="article.vo.CommentLike" /> -->
+		<!-- <mapping class="article.vo.Report" /> -->
+
+		<!-- <mapping class="chat.model.Friends" /> -->
+		<!-- <mapping class="chat.model.OneChat" /> -->
+		<!-- <mapping class="chat.model.AllChat" /> -->
+
+		<mapping class="course.entity.Course" />
+
+		<mapping class="loc.model.SkiLocation" />
+		<!-- <mapping class="loc.model.SkiLocationHistory" /> -->
+
+		<mapping class="member.vo.Member" />
+		<mapping class="member.vo.Coach" />
+
+		<mapping class="order.courseCar.model.CourseCar" />
+		<!-- <mapping class="order.courseOrder.model.CourseOrder" /> -->
+		<!-- <mapping class="order.courseOrderDetail.model.CourseOrderDetail" /> -->
+		<!-- <mapping class="order.productCar.model.ProductCar" /> -->
+		<!-- <mapping class="order.productOrder.model.ProductOrder" /> -->
+		<!-- <mapping class="order.productOrderDetail.model.ProductOrderDetail" /> -->
+
+		<!-- <mapping class="product.vo.Product" /> -->
+
+		<!-- <mapping class="qa.vo.Qa"/> -->
+
+		<!-- <mapping class="serv.vo.ServChat"/> -->
+
+	</session-factory>
+</hibernate-configuration>

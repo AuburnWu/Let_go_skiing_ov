@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/frontend_public.css" />
+    <title>前臺公版</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <!-- 內容欄 -->
+    <div class="main_section position-relative d-flex justify-content-center mb-0" >
+      <!-- 頁面內容置於此 -->
+<div class="container">
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div id="carousel-inner" class="carousel-inner ">
+      <!-- <div class="carousel-item active">
+        <img src="../img/Designer (3).png" class="d-block w-100" alt="...">
+      </div> -->
+      <!-- <div class="carousel-item active">
+        <img src="../img/Designer (3).png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="../img/Designer (3).png" class="d-block w-100" alt="...">
+      </div> -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+      
+        <!-- 側邊工具列 -->
+        <div class="sidetool_group position-absolute btn-toolbar flex-column mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <!-- 聊天室 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/chat.png" alt="#" />
+          </button>
+          <!-- 客服 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/service.png" alt="#" />
+          </button>
+          <!-- 返回頂端 -->
+          <button type="button" id="return_top_button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/up_arrow.png" alt="#" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-1 d-flex align-items-center">
+            <a class="navbar-brand" href="/ski/index.html">
+              <img src="/ski/img/logo.png" style="width: 50px" />
+            </a>
+          </div>
+          <div class="col-7 d-flex align-items-center">
+            <ul class="list-unstyled mb-0" style="color: white">
+              <li style="font-size: 14px">Let's go skiing</li>
+              <li style="font-size: 14px">104台北市中山區南京東路三段219號5樓</li>
+            </ul>
+          </div>
+          <div class="col-2 d-flex justify-content-end align-items-center">
+            <ul class="list-unstyled mb-0">
+              <li><a href="#" class="footer-link">關於我們</a></li>
+            </ul>
+          </div>
+          <div class="col-2 d-flex justify-content-end align-items-center">
+            <ul class="list-unstyled mb-0">
+              <li><a href="#" class="footer-link">常見問題</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+  </body>
+  <!-- 引入bootstrap套件JS -->
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"
+></script>
+  <!-- 引入公版JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/ski/js/embed.js"></script>
+  <script>
+    window.onload = function() {
+      var script1 = document.createElement("script");
+      script1.src = "/ski/js/navbar.js";
+      document.head.appendChild(script1);
+    };
+  </script>
+  <!-- 引入自定義JS -->
+  <script src="../js/ad_slider.js"></script>
+</html>
+

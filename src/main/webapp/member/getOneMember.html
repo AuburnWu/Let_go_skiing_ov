@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/backend_public.css" />
+    <link rel="stylesheet" href="/ski/css/member/member.css" />
+    <title>會員詳細資訊</title>
+  </head>
+
+  <body>
+    <div class="main_section row mb-0 vh-100">
+      <!-- 左側導航列 -->
+      <div class="backend_side aside_section col-2 p-0"></div>
+      <!-- 右側內容欄 -->
+      <div class="col-10 p-0">
+        <!-- 麵包屑 (路徑位置文字) -->
+        <nav>
+          <ol class="breadcrumb mt-1 px-2">
+            <li class="breadcrumb-item">後臺管理系統 | Let's go skiing</li>
+          </ol>
+        </nav>
+        <!-- 主內容欄 -->
+        <div class="content_section mx-3 my-1">
+          <div class="member-form-container">
+            <div class="row mb-3 d-flex align-items-center">
+              <label for="photo" class="col-4 m-0 memberInfo">大頭貼：</label>
+              <div class="col-4">
+                <img id="preview" src="#" alt="預覽圖片" class="fixed-image" />
+                <input type="file" id="photo" name="photo" accept="image/*" style="font-size: 12px" />
+              </div>
+            </div>
+
+            <div class="row mb-3 d-flex align-items-center">
+              <label for="userID" class="col-4 m-0 memberInfo">會員編號：</label>
+              <div class="col-4">
+                <span id="userID" class="memberInfo"></span>
+              </div>
+            </div>
+
+            <div class="row mb-3 d-flex align-items-center">
+              <label for="email" class="col-4 m-0 memberInfo">註冊信箱(帳號)：</label>
+              <div class="col-4">
+                <input type="text" id="email" class="memberInfo"></input>
+              </div>
+            </div>
+
+            <div class="row mb-3 d-flex align-items-center">
+              <label for="userName" class="col-4 m-0 memberInfo">姓名：</label>
+              <div class="col-4">
+                <input type="text" id="userName" class="memberInfo" />
+              </div>
+            </div>
+
+            <div class="row mb-3 d-flex align-items-center">
+              <label for="nickName" class="col-4 m-0 memberInfo">暱稱：</label>
+              <div class="col-4">
+                <input type="text" id="nickName" class="memberInfo" />
+              </div>
+            </div>
+
+            <div class="align-gender row mb-3 d-flex align-items-center">
+              <span class="col-4 form-label m-0">性別：</span>
+              <div class="col-8" style="text-align: left">
+                <input type="radio" name="gender" value="m" id="male" />
+                <label for="male">男</label>
+                <input type="radio" name="gender" value="f" id="female" />
+                <label for="female">女</label>
+                <div class="text-danger" id="gender-text-danger"></div>
+              </div>
+            </div>
+
+            <div class="form-group row mb-3 d-flex align-items-center">
+              <label for="birthDate" class="col-4 form-label m-0">生日：</label>
+              <input type="date" class="col-8 form-control" id="birthDate" name="birthDate" />
+              <div class="text-danger" id="birthDate-text-danger"></div>
+            </div>
+
+            <div class="align-gender row mb-3 d-flex align-items-center">
+              <label for="personID" class="col-4 m-0 memberInfo">身分證字號：</label>
+              <div class="col-4">
+                <input type="text" id="personID" class="memberInfo" />
+              </div>
+            </div>
+
+            <div class="align-gender row mb-3 d-flex align-items-center">
+              <label for="phone" class="col-4 m-0 memberInfo">手機：</label>
+              <div class="col-4">
+                <input type="text" id="phone" class="memberInfo" />
+              </div>
+            </div>
+
+            <div class="align-gender row mb-3 d-flex align-items-center">
+              <label for="address" class="col-4 m-0 memberInfo">地址：</label>
+              <div class="col-8">
+                <input type="text" id="address" class="memberInfo" style="width: 230px;"/>
+              </div>
+            </div>
+
+            <div class="align-gender row mb-3 d-flex align-items-center">
+              <label for="level" class="col-4 m-0 memberInfo">程度：</label>
+              <div class="col-4">
+                <select id="level" class="memberInfo">
+                  <option value="0">初學者</option>
+                  <option value="1">中階者</option>
+                  <option value="2">高階者</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="align-gender row mb-3 d-flex align-items-center">
+              <label for="userStatus" class="col-4 m-0 memberInfo">會員狀態：</label>
+              <div class="col-4">
+                <span id="userStatus" class="memberInfo"></span>
+              </div>
+            </div>
+
+            <div class="align-gender row mb-3 d-flex align-items-center justify-content-center">
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                <button type="button" id="btn_cancel" class="btn btn-secondary">取消</button>
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                <button type="button" id="btn_upload" class="btn btn-primary">儲存</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 引入bootstrap套件JS -->
+    <script src="/ski/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/ski/js/embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/ski/js/member/getOneMember.js"></script>
+    <script src="/ski/js/member/getOneMemberSave.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/frontend_public.css" />
+    <link rel="stylesheet" href="/ski/css/member/member.css" />
+    <title>註冊 | Let's go skiing</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <!-- 內容欄 -->
+    <div class="main_section position-relative d-flex justify-content-center mb-0">
+      <!-- 頁面內容置於此 -->
+      <div class="container-main container text-center fw-bold h-100">
+        <h2 class="text-center fw-bold">加入會員</h2>
+        <form id="registerForm" class="member-form-container">
+          <div class="row mb-3 d-flex align-items-center">
+            <label for="email" class="col-4 form-label m-0">註冊信箱：</label>
+            <input type="text" class="col-8 form-control" id="email" name="email" placeholder="ski@gmail.com" />
+            <div class="text-danger" id="email-text-danger"></div>
+          </div>
+
+          <div class="row mb-3 d-flex align-items-center">
+            <label for="password" class="col-4 form-label m-0">登入密碼：</label>
+            <input type="text" class="col-8 form-control" id="password" name="password" placeholder="password" />
+            <div class="text-danger" id="password-text-danger"></div>
+          </div>
+
+          <div class="row mb-3 d-flex align-items-center">
+            <label for="passwordAgain" class="col-4 form-label m-0">再次確認密碼：</label>
+            <input type="text" class="col-8 form-control" id="passwordAgain" name="passwordAgain" placeholder="password" />
+            <div class="text-danger" id="passwordAgain-text-danger"></div>
+          </div>
+
+          <div class="row mb-3 d-flex align-items-center">
+            <label for="username" class="col-4 form-label m-0">姓名：</label>
+            <input type="text" class="col-8 form-control" id="userName" name="userName" placeholder="滑小雪" />
+            <div class="text-danger" id="userName-text-danger"></div>
+          </div>
+
+          <div class="align-gender row mb-3 d-flex align-items-center">
+            <span class="col-4 form-label m-0">性別：</span>
+            <div class="col-8" style="text-align: left">
+              <input type="radio" name="gender" value="m" id="male" />
+              <label for="male">男</label>
+              <input type="radio" name="gender" value="f" id="female" />
+              <label for="female">女</label>
+              <div class="text-danger" id="gender-text-danger"></div>
+            </div>
+          </div>
+
+          <div class="form-group row mb-3 d-flex align-items-center">
+            <label for="birthDate" class="col-4 form-label m-0">生日：</label>
+            <input type="date" class="col-8 form-control" id="birthDate" name="birthDate" />
+            <div class="text-danger" id="birthDate-text-danger"></div>
+          </div>
+
+          <div class="row mb-3 d-flex align-items-center">
+            <div class="col-4">
+              <label for="level" class="form-label m-0">程度：</label>
+            </div>
+            <div class="col-8" style="text-align: left">
+              <select name="level">
+                <option value="0">初學者</option>
+                <option value="1">中階者</option>
+                <option value="2">高階者</option>
+              </select>
+            </div>
+          </div>
+<!--           <input type="file" id="photo" accept="image/*" value="/ski/img/default_photo.png" style="display: none" /> -->
+          <button type="submit" class="btn btn-primary">註冊</button>
+        </form>
+
+        <!-- 側邊工具列 -->
+        <div class="sidetool_group position-absolute btn-toolbar flex-column mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <!-- 返回頂端 -->
+          <button type="button" id="return_top_button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/up_arrow.png" alt="#" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="footer"></footer>
+  </body>
+  <!-- 引入bootstrap套件JS -->
+  <script src="/ski/js/bootstrap.bundle.js"></script>
+  <script src="/ski/js/frontend_public.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/ski/js/embed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="/ski/js/member/register.js"></script>
+</html>

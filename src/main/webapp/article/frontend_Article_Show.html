@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/frontend_public.css" />
+
+    <link rel="stylesheet" href="/ski/css/Article/frontend_Article_Show.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>前臺討論區_顯示文章</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <!-- 內容欄 -->
+    <div class="main_section position-relative d-flex justify-content-center mb-0" >
+      <!-- 頁面內容置於此 -->
+      <div class="container-main container text-center fw-bold h-100">
+        <div id="type">
+          <!-- <p class="articleType text-start">#新手指教&ensp;&ensp;還敢下來阿冰鳥&ensp;&ensp;(發文時間:2023-04-30 00:00)(修改時間:2023-04-30 01:00)&ensp;&ensp;by張文杰</p>
+          <hr>
+          <p>2拿著，照我，師傅確定要拍嗎，確定要拍嗎，我中了兩槍，希望大家，如果我這一次不幸死的話，請大家一定要傳承我的精神，一定要傳承我的精神，啊啊啊啊啊啊啊</p>
+          <p class="right-align"><i onclick="myFunction(this)" class="fa fa-thumbs-up like-icon">5</i><span><i class="fa fa-commenting" onclick="showComment()"></i></span><span class="comment">3</span><i class="fa fa-exclamation-triangle" onclick="openReportForm()"></i></p> -->
+        </div>
+        <div id="comment">
+          <table class="comment table table-responsive">
+            <thead class="thead">
+            <!-- <tr>
+              <td>
+                <textarea id="content" name="content" rows="10" cols="50" class="content"></textarea><button class="btn_addcomment">送出</button>
+              </td>
+            </tr> -->
+            </thead>
+            <tbody class="tbody">
+            <!-- <tr>
+              <td>
+                <p class="text-left">張文杰</p>
+                <br>
+                <p class="text-left">你從桃園新竹</p><p class="time right-align">2023-04-30 00:00:00</p>
+              </td>
+            </tr> -->
+            </tbody>
+          </table>
+        </div>
+        </div>
+
+        <!-- 側邊工具列 -->
+        <div class="sidetool_group position-absolute btn-toolbar flex-column mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <!-- 聊天室 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/chat.png" alt="#" />
+          </button>
+          <!-- 客服 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/service.png" alt="#" />
+          </button>
+          <!-- 返回頂端 -->
+          <button type="button" id="return_top_button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="/ski/img/up_arrow.png" alt="#" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="footer"></footer>
+  </body>
+  <!-- 引入bootstrap套件JS -->
+  <script src="/ski/js/bootstrap.bundle.js"></script>
+  <script src="/ski/js/frontend_public.js"></script>
+  <!-- 引入公版JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/ski/js/embed.js"></script>
+  <script>
+    window.onload = function() {
+      var script1 = document.createElement("script");
+      script1.src = "/ski/js/navbar.js";
+      document.head.appendChild(script1);
+    };
+  </script>
+  <!-- 引入自定義JS -->
+  <script src="/ski/js/Article/frontend_Article_Show.js"></script>
+</html>

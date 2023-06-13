@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="../css/bootstrap.css" />
+	<link rel="stylesheet" href="../css/root.css" />
+	<link rel="stylesheet" href="../css/frontend_public.css" />
+
+	<title>課程頁面</title>
+</head>
+
+<body>
+	<header class="header"></header>
+	<!-- 內容欄 -->
+	<div class="main_section position-relative vh-100 d-flex justify-content-center mb-0">
+		<!-- 頁面內容置於此 -->
+		<div class="container h-100">
+			<br />
+			<div class="container">
+				<!-- 課程分類 -->
+				<div class="row align-items-start">
+					<div class="col">
+						<nav aria-label="breadcrumb">
+							<!-- <ol class="breadcrumb justify-content-center my-3">
+								<li class="breadcrumb-item"><a href="http://localhost:8080../course/frontend_shop.html">
+										<button class="btn btn-primary"
+											style="background-image: url('path_to_button_image.png'); filter: grayscale(100%); background-size: cover;">
+											商城首頁</button>
+									</a></li>
+							</ol> -->
+						</nav>
+					</div>
+				</div>
+				<input type="hidden" id="courseID" name="courseID" value="">
+				<div class="d-flex justify-content-around">
+					<div class="">
+						<img src="https://dummyimage.com/1000x1000/000/fff" id="coursePhoto"
+							style="width: 300px; height: 300px;">
+					</div>
+
+					<div class="p-3">
+						<div class="d-flex">
+							<p class="me-2" id="courseName">課程名稱</p>
+							<p class="" id="coursePrice">課程價格</p>
+						</div>
+						<div class="d-flex">
+							<p class="me-2" id="courseSkill">課程類別</p>
+							<p class="" id="courseLevel">課程程度</p>
+						</div>
+
+						<div class="row">
+							<div class="col-6">
+								<p class="" id="courseCouch">開課教練</p>
+								<p class="" id="courseLocation">開課地點</p>
+								<p class="" id="courseDate">上課日期</p>
+							</div>
+							<div class="col-6">
+								<p class="" id="coursePeriod">報名期間</p>
+								<p class="" id="coursePerson">報名人數/人數上限</p>
+							</div>
+							<button class="addCart btn btn-info" data-bs-toggle="modal"
+								data-bs-target="#staticBackdrop">加入購物車</button>
+						</div>
+					</div>
+
+
+
+				</div>
+
+				<div class="border-top" id="courseIntroduce">紹課程介紹課程介紹課程介紹課程介紹課程介紹課程介紹課程介紹課程介紹課程介紹課程介紹課程介紹課程介紹</div>
+
+			</div>
+			<!-- 彈跳視窗 -->
+			<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body d-flex justify-content-center">
+							<!-- 加入購物車成功內容 -->
+							<p>課程已成功添加到購物車。</p>
+						</div>
+						<div class="modal-footer">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sidetool_group position-absolute btn-toolbar flex-column mb-3" role="toolbar"
+			aria-label="Toolbar with button groups">
+			<!-- 聊天室 -->
+			<button type="button" class="sidetool_button btn btn-outline-black mb-1">
+				<img class="sidetool_icon" src="../img/chat.png" alt="#" />
+			</button>
+			<!-- 客服 -->
+			<button type="button" class="sidetool_button btn btn-outline-black mb-1">
+				<img class="sidetool_icon" src="../img/service.png" alt="#" />
+			</button>
+			<!-- 返回頂端 -->
+			<button type="button" id="return_top_button" class="sidetool_button btn btn-outline-black mb-1">
+				<img class="sidetool_icon" src="../img/up_arrow.png" alt="#" />
+			</button>
+		</div>
+	</div>
+	</div>
+	<br />
+
+	<footer class="footer"></footer>
+</body>
+<!-- 引入bootstrap套件JS -->
+<script src="../js/frontend_public.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/Course/course_fe_sub.js"></script>
+<script src="../js/embed.js"></script>
+<script>
+	window.onload = function () {
+		var script1 = document.createElement("script");
+		script1.src = "../js/navbar.js";
+		document.head.appendChild(script1);
+	};
+</script>
+
+</html>

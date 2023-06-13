@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="/ski/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ski/css/root.css" />
+    <link rel="stylesheet" href="/ski/css/backend_public.css" />
+
+    <link rel="stylesheet" href="/ski/css/Article/backend_Report_ChangeStatus.css"/>
+    <title>後臺文章管理_檢舉處理</title>
+  </head>
+
+  <body>
+    <div class="main_section row mb-0">
+      <!-- 左側導航列 -->
+      <div class="backend_side aside_section col-2 p-0"></div>
+      <!-- 右側內容欄 -->
+      <div class="col-10 p-0">
+        <!-- 麵包屑 (路徑位置文字) -->
+        <nav>
+          <ol class="breadcrumb mt-1 px-2" style="border: 2px blue solid">
+            <li class="breadcrumb-item">後臺管理系統 | Let's go skiing</li>
+            <li class="breadcrumb-item"><a href="/ski/article/backend_Report.html">檢舉處理</a>
+          </ol>
+        </nav>
+        <!-- 主內容欄 -->
+        <div class="content_section mx-3 my-1">
+          <hr />
+          <!-- 頁面內容(功能展現)置於此 -->
+          <div id="type">
+            <table class="table">
+              <thead></thead>
+              <tbody id="reportTableBody">
+              <!-- <tr>
+                <td><p>檢舉編號:</p></td>
+                <td><p class="id">31</p></td>
+              </tr>
+              <tr>
+                <td><p>文章編號:</p></td>
+                <td><p>13</p></td>
+              </tr>
+              <tr>
+                <td><p>檢舉理由:</p></td>
+                <td><p>發文不附車</p></td>
+              </tr>
+              <tr>
+                <td><p>檢舉回覆:</p></td>
+                <td>
+                  <textarea id="content" name="content" rows="10" cols="50" 
+                    class="statusResponse"
+                    value="發文不附車真的可惡!!"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td><p>完成送出:</p></td>
+                <td><button class="btn_update">送出檢舉回覆</button></td>
+                <td><button class="btn_finish">已送出檢舉回覆，返回上一頁</button></td>
+              </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 引入bootstrap套件JS -->
+    <script src="/ski/js/bootstrap.bundle.js"></script>
+    <!-- 引入公版JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/ski/js/embed.js"></script>
+    <!-- 引入自定義JS -->
+    <script src="/ski/js/Article/backend_Report_ChangeStatus.js"></script>
+  </body>
+</html>

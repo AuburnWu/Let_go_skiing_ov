@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入bootstrap套件CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/root.css" />
+    <link rel="stylesheet" href="../css/frontend_public.css" />
+    <link rel="stylesheet" href="../css/order/courseCar.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"
+  />
+    <title>課程訂單</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <!-- 內容欄 -->
+    <div class="main_section position-relative d-flex justify-content-center mb-0">
+      
+      <div class="container-main container text-center fw-bold h-100">
+          <div class="row">
+            <!-- 會員中心sidebar -->
+            <div class="member_side col-2 bg-light text-light"></div>  
+              <!-- 頁面內容置於此 -->
+              <div class="col-10">
+                <div class="row" style="justify-content: center">
+                  <div
+                    class="col-6"
+                    style="width: 70%"
+                    id="courseOrderList"
+                  ></div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- 側邊工具列 -->
+        <div class="sidetool_group position-absolute btn-toolbar flex-column mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <!-- 聊天室 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="../img/chat.png" alt="#" />
+          </button>
+          <!-- 客服 -->
+          <button type="button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="../img/service.png" alt="#" />
+          </button>
+          <!-- 返回頂端 -->
+          <button type="button" id="return_top_button" class="sidetool_button btn btn-outline-black mb-1">
+            <img class="sidetool_icon" src="../img/up_arrow.png" alt="#" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="footer"></footer>
+  </body>
+  <!-- 引入bootstrap套件JS -->
+  <script src="../js/bootstrap.bundle.js"></script>
+  <script src="../js/frontend_public.js"></script>
+  <!-- 引入公版JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="../js/embed.js"></script>
+  <script>
+    window.onload = function() {
+      var script1 = document.createElement("script");
+      script1.src = "../js/navbar.js";
+      document.head.appendChild(script1);
+
+      var script2 = document.createElement("script");
+      script2.src = "../js/sidebar.js";
+      document.head.appendChild(script2);
+    };
+  </script>
+  <!-- 引入自定義JS -->
+  <script src="../js/jQuery v3.7.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+  <script src="../js/Order/courseOrder.js"></script>
+  
+</html>
